@@ -12,12 +12,12 @@ try {
     \App\Logger::getInstance()->log($e);
     $view = new \App\View();
     $view->error = $e->getMessage();
-    $view->display(__DIR__ . '/App/view/error.php');
+    $view->displayTwig('error.php');
 }catch (\App\Exceptions\BaseException $e) {
     \App\Logger::getInstance()->log($e);
     $view = new \App\View();
     $view->error = $e->getMessage();
-    $view->display(__DIR__ . '/App/view/error.php');
+    $view->displayTwig('error.php');
 }
 
 

@@ -10,21 +10,24 @@ class View
 {
     use TMagic;
 
-    public function display($template)
+    /**
+     * @param $template
+     * @return string
+     */
+    public function renderTwig($template)
     {
-        echo $this->render($template);
-    }
-
-    public function render($template)
-    {
+        $loader = new \Twig_Loader_Filesystem(__DIR__ . '/view');
+        $twig = new \Twig_Environment($loader);
         ob_start();
-        foreach($this->data as $key => $value) {
-            $$key = $value;
-        }
-        include $template;
-        $html = ob_get_contents();
+        $html = $twig->render($template, $this->data);
         ob_end_clean();
         return $html;
+
+    }
+
+    public function displayTwig($template)
+    {
+        echo $this->renderTwig($template);
     }
 
     /**

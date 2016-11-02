@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $title?></title>
+    <title>{{ title }}</title>
     <link href="/App/view/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -12,32 +12,18 @@
         </ul>
     </div><!--/.nav-collapse -->
     <div>
-        <?php if($single->pfoto !== null):?>
-        <img src="/App/view/img/<?php echo $single->pfoto; ?>" class="img-responsive" alt="<?php echo $single->surname; ?>"/>
-            <?php else :?>
-            <p>Нет картинки</p>
-        <?php endif;?>
-        <p>Фамилия: <?php echo $single->surname; ?></p>
-        <p>Имя: <?php echo $single->name; ?></p>
-        <p> Дата рождения: <?php echo $single->date; ?></p>
+        <img src="/App/view/img/{{ single.pfoto}}" class="img-responsive" alt="{{ single.surname}}"/>
+        <p>Фамилия: {{ single.surname}}</p>
+        <p>Имя: {{ single.name}}</p>
+        <p> Дата рождения: {{ single.date}}</p>
         <p>Биография: </br>
-            <?php echo $single->biography; ?>
+            {{ single.biography}}
         </p>
         <div >
-            <?php if(!empty($single->genpl)): ?>
-                <?php if ($single->genpl->id !== null):?>
-                    <a href="/index/one/<?php echo $single->genpl->id?>">Следующий - <?php echo $single->genpl->surname?></a>
-                <? endif; ?>
-            <?php else :?>
-                <a href="/index/one/1">В начало</a>
-            <? endif; ?>
+            <a href="/index/one/{{ single.genpl.id | default('Нет автора')}}>">Следующий - {{ single.genpl.surname}}</a>
         </div>
         <div>
-            <?php if(!empty($single->genmin)): ?>
-                <?php if ($single->genmin->id !== null):?>
-                    <a href="/index/one/<?php echo $single->genmin->id?>">Предыдущий - <?php echo $single->genmin->surname?></a>
-                <? endif; ?>
-            <? endif; ?>
+            <a href="/index/one/{{ single.genmin.id}}">Предыдущий - {{ single.genmin.surname}}</a>
         </div>
     </div>
 </body>

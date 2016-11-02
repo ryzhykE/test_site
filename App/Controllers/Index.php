@@ -15,7 +15,7 @@ class Index
         $general = General::findAll();
         $this->view->title = 'Главная';
         $this->view->general = $general;
-        $this->view->display(__DIR__. '/../view/main.php');
+        $this->view->displayTwig('main.php');
     }
     public function actionOne (int $id)
     {
@@ -25,6 +25,6 @@ class Index
     }
     $this->view->title = 'Генерал';
     $this->view->single = $article;
-    $this->view->display(__DIR__. '/../view/general.php');
+    $this->view->displayTwig('general.php');
     }
 }
