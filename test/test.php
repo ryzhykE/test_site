@@ -15,5 +15,11 @@ $author = \App\Model\Article::findAll();
 var_dump($author[0]->author);
 */
 
+//$general = \App\Model\Rang::getSort('DESC');
+
+$general = \App\Model\General::findBySort('id', 'DESC');
+var_dump($general);
+
+
 
 

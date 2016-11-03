@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\Exceptions\MultiException;
-
 abstract class Model
 {
     public static $table;
@@ -37,5 +35,23 @@ abstract class Model
         );
         return $data[0] ?? false;
     }
+
+    /**
+     * @param $field
+     * @param $param
+     * @return mixed
+     */
+    public static function findBySort($field,$param)
+    {
+        $db = DB::getInstance();
+        $data = $db->query(
+            'SELECT * FROM ' . static::$table . ' ORDER BY '. $field.' '.$param,
+            [],
+            static::class
+        );
+        return $data;
+    }
+
+
 
 }

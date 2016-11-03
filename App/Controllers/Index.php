@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\AController;
 use App\Exceptions\BaseException;
-use App\Exceptions\Main;
 use App\Model\General;
 
 class Index
@@ -15,6 +14,7 @@ class Index
      */
     public function actionIndex()
     {
+        //$general = General::findBySort('date','DESC');
         $general = General::findAll();
         $this->view->title = 'Главная';
         $this->view->general = $general;
@@ -38,6 +38,7 @@ class Index
     $this->view->title = 'Генерал';
     $this->view->page = (int)$id;
     $this->view->single = $member;
+
     $this->view->displayTwig('general.php');
     }
 }
