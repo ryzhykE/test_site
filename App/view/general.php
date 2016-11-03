@@ -10,7 +10,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
         </ul>
-    </div><!--/.nav-collapse -->
+    </div>
 
     <div>
         <img src="/App/view/img/{{ single.pfoto}}" class="img-responsive" alt="{{ single.surname}}"/>

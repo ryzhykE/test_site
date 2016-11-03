@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\Exceptions\Database;
 use App\Exceptions\DbException;
 
 class Db
@@ -28,22 +27,6 @@ class Db
     /**
      * @param string $sql
      * @param array $data
-     * @return bool
-     */
-    public function execute(string $sql, array $data = [])
-    {
-        $sth = $this->dbh->prepare($sql);
-        $result = $sth->execute($data);
-        if (false === $result) {
-            throw new DbException('Ошибка запроса к БД');
-            die;
-        }
-        return true;
-    }
-
-    /**
-     * @param string $sql
-     * @param array $data
      * @param null $class
      * @return array,obj
      */
@@ -60,15 +43,6 @@ class Db
         } else {
             return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
         }
-    }
-
-    /**
-     * @return string
-     */
-
-    public function lastInsertId()
-    {
-        return $this->dbh->lastInsertId();
     }
 
 }
