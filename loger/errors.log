@@ -1,14 +1,1 @@
-Время:2016-10-30 13:40:09 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\prof.local\App\Db.php На строчке 56 Сообщение о ошибке: Ошибка запроса к БД
-Время:2016-10-30 13:40:45 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\prof.local\App\Controllers\Index.php На строчке 25 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:21:40 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 35 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:21:43 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 35 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:22:03 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 35 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:23:06 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 26 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:23:45 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 26 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:25:15 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 27 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:31:21 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 30 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 08:31:24 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 30 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 09:35:10 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 27 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 09:37:17 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 27 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-01 12:47:45 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 27 Сообщение о ошибке: Ошибка 404 - не найдено
-Время:2016-11-02 13:45:57 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Controllers\Index.php На строчке 24 Сообщение о ошибке: Ошибка 404 - не найдено
+Время:2016-11-02 23:34:12 Ошибка: 0 Путь к файлу: E:\OpenServer\domains\soft.loc\App\Db.php На строчке 23 Сообщение о ошибке: SQLSTATE[HY000] [1049] Unknown database 'softd'

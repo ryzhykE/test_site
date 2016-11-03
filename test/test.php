@@ -51,17 +51,5 @@ $author = \App\Model\Article::findAll();
 var_dump($author[0]->author);
 */
 
-$ex = new \App\MultiException();
-
-$ex[1] = 'one';
-$ex->add('item');
-
-//echo $ex[2];
-//echo $ex[1];
-
-foreach ($ex as $k => $v) {
-    echo $k . '->' . $v;
-}
-
 
 

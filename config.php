@@ -3,7 +3,7 @@
 return [
   'db' => [
       'host' => '127.0.0.1',
-      'dbname' => 'php2',
+      'dbname' => 'softDb',
       'user' => 'root',
       'password' => '',
   ]

@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-use App\Db;
 use App\Model;
 
 class General
@@ -15,6 +14,7 @@ class General
     public $pfoto;
     public $date;
     public $biography;
+    public $rang_id;
 
     /**
      * Lazy load
@@ -25,10 +25,7 @@ class General
     {
         switch($name) {
             case 'genpl':
-                return  General::findByid($this->id +1);
-                break;
-            case 'genmin':
-                return  General::findByid($this->id -1);
+                return  Rang::findByid($this->rang_id);
                 break;
             default:
                 return null;
@@ -39,9 +36,6 @@ class General
     {
         switch($name) {
             case 'genpl':
-                return true;
-                break;
-            case 'genmin':
                 return true;
                 break;
             default:

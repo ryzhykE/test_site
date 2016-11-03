@@ -11,6 +11,7 @@
             <li class="active"><a href="/">Home</a></li>
         </ul>
     </div><!--/.nav-collapse -->
+
     <div>
         <img src="/App/view/img/{{ single.pfoto}}" class="img-responsive" alt="{{ single.surname}}"/>
         <p>Фамилия: {{ single.surname}}</p>
@@ -20,11 +21,17 @@
             {{ single.biography}}
         </p>
         <div >
-            <a href="/index/one/{{ single.genpl.id | default('Нет автора')}}>">Следующий - {{ single.genpl.surname}}</a>
-        </div>
-        <div>
-            <a href="/index/one/{{ single.genmin.id}}">Предыдущий - {{ single.genmin.surname}}</a>
+             <p class="rang">Звание:{{ single.genpl.rang}}</p>
         </div>
     </div>
+    {% block nav %}
+    <nav>
+        <ul class="pager">
+            {% import 'pagination.php' as pagination %}
+            {{ pagination.pagination(generaler | length, page) }}
+        </ul>
+    </nav>
+    {% endblock %}
 </body>
 </html>
+

@@ -27,8 +27,6 @@
     </tbody>
 </table>
 
-
-
 <div id="fon"></div>
 <div id="load"></div>
 
