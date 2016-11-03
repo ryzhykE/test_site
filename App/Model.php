@@ -41,11 +41,11 @@ abstract class Model
      * @param $param
      * @return mixed
      */
-    public static function findBySort($field,$param)
+    public static function findBySort($field)
     {
         $db = DB::getInstance();
         $data = $db->query(
-            'SELECT * FROM ' . static::$table . ' ORDER BY '. $field.' '.$param,
+            'SELECT * FROM ' . static::$table . ' ORDER BY '. $field,
             [],
             static::class
         );
