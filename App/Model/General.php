@@ -32,6 +32,10 @@ class General
         }
     }
 
+    /**
+     * @param $name
+     * @return bool|null
+     */
     public function __isset($name)
     {
         switch($name) {

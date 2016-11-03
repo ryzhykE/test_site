@@ -10,6 +10,9 @@ class Db
 
     protected $dbh;
 
+    /**
+     * Db constructor.
+     */
     protected function __construct()
     {
         $config = Config::getInstance()->data['db'];

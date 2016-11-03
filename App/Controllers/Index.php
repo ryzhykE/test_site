@@ -10,6 +10,9 @@ use App\Model\General;
 class Index
     extends AController
 {
+    /**
+     * all field
+     */
     public function actionIndex()
     {
         $general = General::findAll();
@@ -18,6 +21,12 @@ class Index
 
         $this->view->displayTwig('main.php');
     }
+
+    /**
+     * @param int $id
+     * @throws BaseException
+     * One field
+     */
     public function actionOne (int $id)
     {
     $member = General::findByid($id);

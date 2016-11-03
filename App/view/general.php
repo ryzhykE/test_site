@@ -11,7 +11,6 @@
             <li class="active"><a href="/">Home</a></li>
         </ul>
     </div>
-
     <div>
         <img src="/App/view/img/{{ single.pfoto}}" class="img-responsive" alt="{{ single.surname}}"/>
         <p>Фамилия: {{ single.surname}}</p>
