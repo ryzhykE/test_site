@@ -20,7 +20,7 @@ class Router
         $ctrlClassName = '\App\Controllers\\' . $ctrlRequest;
         $ctrl = new $ctrlClassName;
         //get method
-        $actRequest = !empty($parts[2]) ? $parts[2] : 'Index';
+        $actRequest = !empty($parts[2]) ? $parts[2] : 'Default';
         //get id
         $idRequest = !empty($parts[3]) ? $parts[3] : null;
 

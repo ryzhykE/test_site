@@ -45,13 +45,10 @@ abstract class Model
     {
         $db = DB::getInstance();
         $data = $db->query(
-            'SELECT * FROM ' . static::$table . ' ORDER BY '. $field,
+            'SELECT * FROM ' . static::$table . ' ORDER BY '. $field . ' DESC',
             [],
             static::class
         );
         return $data;
     }
-
-
-
 }

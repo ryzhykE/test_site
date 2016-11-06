@@ -13,30 +13,14 @@ class Index
      * All fields
      * sort
      */
-    public function actionIndex()
+    public function actionDefault($page)
 
     {
-        if ($_POST['named']) {
-            $general = General::findBySort('name DESC');
-        }
-        else if ($_POST['namea']){
-            $general = General::findBySort('name ASC');
-        }
-        else if ($_POST['surnamed']){
-            $general = General::findBySort('surname DESC');
-        }
-        else if ($_POST['surnamea']){
-            $general = General::findBySort('surname ASC');
-        }
-        else if ($_POST['dated']){
-            $general = General::findBySort('date DESC');
-        }
-        else if ($_POST['datea']){
-            $general = General::findBySort('date ASC');
+        if (isset($page)) {
+            $general = General::findBySort($page);
         } else {
             $general = General::findAll();
         }
-
         $this->view->title = 'Главная';
         $this->view->general = $general;
 
